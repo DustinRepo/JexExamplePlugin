@@ -1,0 +1,10 @@
+{
+  "name": "ExamplePlugin",
+  "mainClass": "me.dustin.example.ExamplePlugin",
+  "description": "An example plugin",
+  "authors": [
+    "me",
+    "you"
+  ],
+  "allowDisable": true
+}
