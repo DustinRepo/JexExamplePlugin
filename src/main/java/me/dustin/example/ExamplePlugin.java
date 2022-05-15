@@ -1,5 +1,6 @@
 package me.dustin.example;
 
+import me.dustin.example.command.PluginCommandManager;
 import me.dustin.example.feature.PluginFeatureManager;
 import me.dustin.jex.feature.plugin.JexPlugin;
 import org.apache.logging.log4j.LogManager;
@@ -35,7 +36,8 @@ public class ExamplePlugin {
      */
     @JexPlugin.CommandsLoad
     public void commandsLoad() {
-        //PluginCommandManager.INSTANCE.load();
+        PluginCommandManager.INSTANCE.load();
+        logger.info("Loaded Example commands");
     }
     /*
         Called only when a plugin is re-enabled from the client
@@ -45,6 +47,7 @@ public class ExamplePlugin {
     public void enable() {
         isEnabled = true;
         PluginFeatureManager.INSTANCE.enablePlugin();
+        PluginCommandManager.INSTANCE.enablePlugin();
     }
     /*
         Called when the client disables the plugin
@@ -54,6 +57,7 @@ public class ExamplePlugin {
     public void disable() {
         isEnabled = false;
         PluginFeatureManager.INSTANCE.disablePlugin();
+        PluginCommandManager.INSTANCE.disablePlugin();
     }
 
     public static Logger getLogger() {
