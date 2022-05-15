@@ -1,7 +1,5 @@
 package me.dustin.example.command;
 
-import me.dustin.events.EventManager;
-import me.dustin.example.feature.ExampleFeature;
 import me.dustin.jex.feature.command.CommandManagerJex;
 import me.dustin.jex.feature.command.core.Command;
 
