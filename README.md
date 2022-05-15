@@ -12,10 +12,7 @@ This is an example Plugin for the utility client Jex
 1. Open `build.gradle` in Intellij as a gradle project and wait for it to set up
 2. `File -> Close Project` if you do not have a run configuration, then re-open the project
 3. Edit the JexPlugin.json to specify the plugin name, description, authors, main class, etc.
-4. Edit the `gradle.properties` file to specify the same Minecraft version and Yarn Mappings as Jex which you can find [here](https://github.com/DustinRepo/JexClient/blob/main/gradle.properties)
-5. To test, just run the "Minecraft Client" run configuration
-6. When ready to distribute, run `./gradlew build` and the output will be in `build/libs/`
-
-# The Mixins problem
-Although Fabric has support for mixins and this project has example mixins, they do not currently work in a Jex Plugin, as the earliest time JexClient can load a plugin is after mixins are loaded and applied.
-If you know a fix for this issue, please let me know.
+4. Rename exampleplugin.mixins.json
+5. Edit the `gradle.properties` file to specify the same Minecraft version and Yarn Mappings as Jex which you can find [here](https://github.com/DustinRepo/JexClient/blob/main/gradle.properties)
+6. To test, just run the "Minecraft Client" run configuration
+7. When ready to distribute, run `./gradlew build` and the output will be in `build/libs/`

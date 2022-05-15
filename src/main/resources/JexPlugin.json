@@ -1,11 +1,14 @@
 {
   "name": "ExamplePlugin",
+  "version": "1.0",
   "mainClass": "me.dustin.example.ExamplePlugin",
-  "mixins": "pluginname.mixins.json",
+  "mixins": "exampleplugin.mixins.json",
   "description": "An example plugin",
   "authors": [
     "me",
     "you"
+  ],
+  "required_mods": [
   ],
   "allowDisable": true
 }
