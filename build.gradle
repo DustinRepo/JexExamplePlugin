@@ -17,3 +17,7 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation files('lib/jex-plugin-dev.jar')
 }
+
+jar {
+    archiveName("${project.plugin_name}.jar")
+}

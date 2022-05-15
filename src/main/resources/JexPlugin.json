@@ -1,6 +1,7 @@
 {
   "name": "ExamplePlugin",
   "mainClass": "me.dustin.example.ExamplePlugin",
+  "mixins": "pluginname.mixins.json",
   "description": "An example plugin",
   "authors": [
     "me",

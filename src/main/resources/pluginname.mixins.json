@@ -1,0 +1,6 @@
+{
+  "package": "me.dustin.example.mixins",
+  "mixins": [
+    "MixinMinecraftClient"
+  ]
+}
