@@ -2,6 +2,7 @@
 This is an example Plugin for the utility client Jex
 
 # How to get started
+Before getting started, it is recommended to install the [Minecraft Development](https://plugins.jetbrains.com/plugin/8327-minecraft-development) plugin in Intellij as this will be a lot of help with Mixins
 ## Getting Jex
 1. First, download this project, using the green button above either download as zip or copy the link and use `git clone https...`
 2. Now do the same with [JexClient](https://github.com/DustinRepo/JexClient)
