@@ -11,8 +11,7 @@ This is an example Plugin for the utility client Jex
 ## Creating a plugin
 1. Open `build.gradle` in Intellij as a gradle project and wait for it to set up
 2. `File -> Close Project` if you do not have a run configuration, then re-open the project
-3. Edit the JexPlugin.json to specify the plugin name, description, authors, main class, etc.
-4. Rename exampleplugin.mixins.json
-5. Edit the `gradle.properties` file to specify the same Minecraft version and Yarn Mappings as Jex which you can find [here](https://github.com/DustinRepo/JexClient/blob/main/gradle.properties)
-6. To test, just run the "Minecraft Client" run configuration
-7. When ready to distribute, run `./gradlew build` and the output will be in `build/libs/`
+3. Replace all references of `ExamplePlugin` with your plugin name in files like `JexPlugin.json`, `gradle.properties`, `exampleplugin.mixins.json`
+4. Edit the `gradle.properties` file to specify the same Minecraft version and Yarn Mappings as Jex which you can find [here](https://github.com/DustinRepo/JexClient/blob/main/gradle.properties)
+5. To test, just run the "Minecraft Client" run configuration
+6. When ready to distribute, run `./gradlew build` and the output will be in `build/libs/`
