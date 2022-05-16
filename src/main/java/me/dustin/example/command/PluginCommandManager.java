@@ -29,7 +29,7 @@ public enum PluginCommandManager {
         });
     }
 
-    public ArrayList<Command> getMyFeatures() {
+    public ArrayList<Command> getMyCommands() {
         return myCommands;
     }
 }
