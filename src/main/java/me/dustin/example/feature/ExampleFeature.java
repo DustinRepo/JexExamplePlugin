@@ -3,13 +3,11 @@ package me.dustin.example.feature;
 import me.dustin.events.core.EventListener;
 import me.dustin.events.core.annotate.EventPointer;
 import me.dustin.example.ExamplePlugin;
-import me.dustin.example.gui.ExampleScreen;
 import me.dustin.jex.event.filters.KeyPressFilter;
-import me.dustin.jex.event.misc.EventJoinWorld;
 import me.dustin.jex.event.misc.EventKeyPressed;
 import me.dustin.jex.feature.mod.core.Feature;
 import me.dustin.jex.feature.option.annotate.Op;
-import me.dustin.jex.helper.misc.Wrapper;
+import me.dustin.jex.helper.misc.ChatHelper;
 import org.lwjgl.glfw.GLFW;
 
 //if you don't specify name, it will just use the name of the class
@@ -26,12 +24,7 @@ public class ExampleFeature extends Feature {
     public String exampleMode = "One";
 
     @EventPointer
-    private final EventListener<EventJoinWorld> eventJoinWorldEventListener = new EventListener<>(eventJoinWorld -> {
-        ExamplePlugin.getLogger().info("Hello world!");
-    });
-
-    @EventPointer
     private final EventListener<EventKeyPressed> eventKeyPressedEventListener = new EventListener<>(eventKeyPressed -> {
-        Wrapper.INSTANCE.getMinecraft().setScreen(new ExampleScreen());
-    }, new KeyPressFilter(EventKeyPressed.PressType.IN_GAME, GLFW.GLFW_KEY_P));
+        ChatHelper.INSTANCE.addClientMessage("Hello world!");
+    }, new KeyPressFilter(EventKeyPressed.PressType.IN_GAME, GLFW.GLFW_KEY_UP));
 }
