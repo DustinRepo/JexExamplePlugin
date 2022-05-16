@@ -23,14 +23,14 @@ public abstract class MixinSprint {
 
     @Shadow protected abstract boolean canSprint();
 
-    //This is an example of how to replace an event in a Jex class. Since the events are final you must @Final the shadow
+    //This is an example of how to replace an event in a Jex class. Since the events are final you must @Mutable the shadow field
     @Inject(method = "<init>", at = @At("RETURN"))
     public void initSprint(CallbackInfo ci) {
         this.eventPlayerPacketsEventListener = new EventListener<>(event -> {
             Wrapper.INSTANCE.getLocalPlayer().setSprinting(this.canSprint());
         }, new PlayerPacketsFilter(EventPlayerPackets.Mode.PRE));
     }
-
+    //simple change to isMoving to demonstrate the mixins work, this just makes multidir not work
     @Inject(method = "isMoving", at = @At("HEAD"), cancellable = true)
     public void isMoving(CallbackInfoReturnable<Boolean> cir) {
         cir.setReturnValue(Wrapper.INSTANCE.getLocalPlayer().input.movementForward > 0);
