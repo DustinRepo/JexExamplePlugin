@@ -16,3 +16,5 @@ Before getting started, it is recommended to install the [Minecraft Development]
 4. Edit the `gradle.properties` file to specify the same Minecraft version and Yarn Mappings as Jex which you can find [here](https://github.com/DustinRepo/JexClient/blob/main/gradle.properties)
 5. To test, just run the "Minecraft Client" run configuration
 6. When ready to distribute, run `./gradlew build` and the output will be in `build/libs/`
+
+For a more advanced example, check out the [Jex Crash Plugin](https://github.com/DustinRepo/JexCrashPlugin)
