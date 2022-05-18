@@ -1,8 +1,13 @@
 # Jex Example Plugin
 This is an example Plugin for the utility client Jex
 
-# How to get started
+# Before getting started
 Before getting started, it is recommended to install the [Minecraft Development](https://plugins.jetbrains.com/plugin/8327-minecraft-development) plugin in Intellij as this will be a lot of help with Mixins
+
+For explanations on parts of the client like adding commands or features, you can check the [wiki](https://github.com/DustinRepo/JexExamplePlugin/wiki)
+
+For a more advanced example, check out the [Jex Crash Plugin](https://github.com/DustinRepo/JexCrashPlugin)
+# How to get started
 ## Getting Jex
 1. First, download this project, using the green button above either download as zip or copy the link and use `git clone https...`
 2. Now do the same with [JexClient](https://github.com/DustinRepo/JexClient)
@@ -16,5 +21,3 @@ Before getting started, it is recommended to install the [Minecraft Development]
 4. Edit the `gradle.properties` file to specify the same Minecraft version and Yarn Mappings as Jex which you can find [here](https://github.com/DustinRepo/JexClient/blob/main/gradle.properties)
 5. To test, just run the "Minecraft Client" run configuration
 6. When ready to distribute, run `./gradlew build` and the output will be in `build/libs/`
-
-For a more advanced example, check out the [Jex Crash Plugin](https://github.com/DustinRepo/JexCrashPlugin)
