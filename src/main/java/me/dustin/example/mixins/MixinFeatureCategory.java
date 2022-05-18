@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-@Mixin(Feature.Category.class)
+@Mixin(value = Feature.Category.class, remap = false)
 public class MixinFeatureCategory {
 
     @Shadow @Final @Mutable private static Feature.Category[] $VALUES;
