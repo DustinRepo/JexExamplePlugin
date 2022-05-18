@@ -2,6 +2,7 @@
   "name": "ExamplePlugin",
   "version": "1.0",
   "mainClass": "me.dustin.example.ExamplePlugin",
+  "icon" : "assets/exampleplugin/icon.png",
   "mixins": "exampleplugin.mixins.json",
   "description": "An example plugin",
   "authors": [
