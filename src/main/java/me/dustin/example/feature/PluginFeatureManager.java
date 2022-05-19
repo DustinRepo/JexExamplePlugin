@@ -13,7 +13,7 @@ public enum PluginFeatureManager {
         For easily supporting disabling the plugin, seperate your own features in a list and manually register/unregister them when enabled/disabled
      */
     public void load() {
-        myFeatures.add(new ExampleFeature().loadFeature());
+        myFeatures.add(new ExampleFeature());
 
         FeatureManager.INSTANCE.getFeatures().addAll(myFeatures);
     }

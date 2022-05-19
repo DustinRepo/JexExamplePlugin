@@ -2,6 +2,7 @@ package me.dustin.example;
 
 import me.dustin.example.command.PluginCommandManager;
 import me.dustin.example.feature.PluginFeatureManager;
+import me.dustin.jex.feature.mod.core.Category;
 import me.dustin.jex.feature.plugin.JexPlugin;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -9,6 +10,12 @@ import org.apache.logging.log4j.Logger;
 public class ExamplePlugin {
     private static final Logger logger = LogManager.getFormatterLogger("ExamplePlugin");
     private static boolean isEnabled = true;
+
+    /*
+        You can create your own Category instances. Creating a new instance automatically adds it to the list of categories.
+     */
+    public static Category EXAMPLE = new Category("Example", 0xff00ff00);
+
     /*
         Called at the end of client load. Happens before @FabricLoad
      */

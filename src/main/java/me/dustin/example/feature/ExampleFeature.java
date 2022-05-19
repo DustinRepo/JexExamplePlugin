@@ -10,8 +10,6 @@ import me.dustin.jex.feature.option.annotate.Op;
 import me.dustin.jex.helper.misc.ChatHelper;
 import org.lwjgl.glfw.GLFW;
 
-//if you don't specify name, it will just use the name of the class
-@Feature.Manifest(name = "Example", category = Feature.Category.MISC, description = "Example", key = GLFW.GLFW_KEY_K)
 public class ExampleFeature extends Feature {
 
     @Op(name = "Example Boolean")
@@ -22,6 +20,10 @@ public class ExampleFeature extends Feature {
     public int exampleInt;
     @Op(name = "Example Mode", all = {"One", "Two"})
     public String exampleMode = "One";
+
+    public ExampleFeature() {
+        super(ExamplePlugin.EXAMPLE, "An example mod.");
+    }
 
     @EventPointer
     private final EventListener<EventKeyPressed> eventKeyPressedEventListener = new EventListener<>(eventKeyPressed -> {
