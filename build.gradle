@@ -11,6 +11,15 @@ dependencies {
     modImplementation files('lib/jex-plugin-dev.jar')
 }
 
+processResources {
+    filesMatching("JexPlugin.json") {
+        expand "version": project.plugin_version, "mixins": project.mixins_name
+    }
+    filesMatching("${project.mixins_name}") {
+        expand "name": project.plugin_name
+    }
+}
+
 jar {
     archiveName("${project.plugin_name}.jar")
 }

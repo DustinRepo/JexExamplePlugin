@@ -55,6 +55,8 @@ public class ExampleFeature extends Feature {
             .min(500)
             .max(5000)
             .inc(500)
+            .parent(exampleBooleanProperty)
+            .depends(parent -> (boolean) parent.value())
             .build();
 
     public ExampleFeature() {

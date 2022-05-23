@@ -1,9 +1,9 @@
 {
   "name": "ExamplePlugin",
-  "version": "1.0",
+  "version": "${version}",
   "mainClass": "me.dustin.example.ExamplePlugin",
   "icon" : "assets/exampleplugin/icon.png",
-  "mixins": "exampleplugin.mixins.json",
+  "mixins": "${mixins}",
   "description": "An example plugin",
   "authors": [
     "me",
