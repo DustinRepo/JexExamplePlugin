@@ -6,7 +6,7 @@ import com.mojang.brigadier.tree.CommandNode;
 import me.dustin.jex.feature.command.core.Command;
 import me.dustin.jex.feature.command.core.annotate.Cmd;
 import me.dustin.jex.helper.misc.ChatHelper;
-import net.fabricmc.fabric.api.client.command.v1.FabricClientCommandSource;
+import net.fabricmc.fabric.api.client.command.v2.FabricClientCommandSource;
 
 @Cmd(name = "example", description = "Example command", syntax = ".example", alias = "ex")
 public class ExampleCommand extends Command {

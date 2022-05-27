@@ -55,6 +55,7 @@ public class ExamplePlugin {
         isEnabled = true;
         PluginFeatureManager.INSTANCE.enablePlugin();
         PluginCommandManager.INSTANCE.enablePlugin();
+        Category.values().add(EXAMPLE);
     }
     /*
         Called when the client disables the plugin
@@ -65,6 +66,7 @@ public class ExamplePlugin {
         isEnabled = false;
         PluginFeatureManager.INSTANCE.disablePlugin();
         PluginCommandManager.INSTANCE.disablePlugin();
+        Category.values().remove(EXAMPLE);
     }
 
     public static Logger getLogger() {
