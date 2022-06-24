@@ -1,5 +1,6 @@
 package me.dustin.example.command;
 
+import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.tree.CommandNode;
@@ -7,11 +8,12 @@ import me.dustin.jex.feature.command.core.Command;
 import me.dustin.jex.feature.command.core.annotate.Cmd;
 import me.dustin.jex.helper.misc.ChatHelper;
 import net.fabricmc.fabric.api.client.command.v2.FabricClientCommandSource;
+import net.minecraft.command.CommandRegistryAccess;
 
 @Cmd(name = "example", description = "Example command", syntax = ".example", alias = "ex")
 public class ExampleCommand extends Command {
     @Override
-    public void registerCommand() {
+    public void registerCommand(CommandDispatcher<FabricClientCommandSource> dispatcher, CommandRegistryAccess commandRegistryAccess) {
         CommandNode<FabricClientCommandSource> node = dispatcher.register(literal(this.name).executes(this));
         for (String alias : getAlias()) {
             dispatcher.register(literal(alias).redirect(node));
